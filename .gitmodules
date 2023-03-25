@@ -1,0 +1,4 @@
+[submodule "ct-keycloak-quarkus-spis"]
+	path = ct-keycloak-quarkus-spis
+	url = git@github.com:czetsuyatech/ct-keycloak-quarkus-spis.git
+	branch = main

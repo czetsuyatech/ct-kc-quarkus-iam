@@ -6,9 +6,8 @@ FROM openjdk:19-ea-17-slim-buster
 
 ### ------------------------- Environment Variables ------------------------- ###
 
-ENV KEYCLOAK_VERSION 19.0.3
+ENV KEYCLOAK_VERSION 21.0.1
 ENV JDBC_MYSQL_VERSION 8.0.29
-ENV JDBC_POSTGRES_VERSION 42.5.0
 
 ENV LAUNCH_JBOSS_IN_BACKGROUND 1
 ENV PROXY_ADDRESS_FORWARDING false
@@ -22,9 +21,6 @@ ARG KEYCLOAK_DIST_BASE=https://github.com/keycloak/keycloak/releases/download/$K
 ARG KEYCLOAK_DIST_FILE=keycloak-$KEYCLOAK_VERSION.tar.gz
 ARG JDBC_MYSQL_JAR_BASE=https://repo1.maven.org/maven2/mysql/mysql-connector-java/$JDBC_MYSQL_VERSION/
 ARG JDBC_MYSQL_JAR_FILE=mysql-connector-java-$JDBC_MYSQL_VERSION.jar
-
-ARG JDBC_POSTGRESQL_JAR_BASE=https://repo1.maven.org/maven2/org/postgresql/postgresql/$JDBC_POSTGRES_VERSION/
-ARG JDBC_POSTGRESQL_JAR_FILE=postgresql-$JDBC_POSTGRES_VERSION.jar
 
 ### ------------------------- Base ------------------------- ###
 
@@ -70,7 +66,7 @@ COPY --chown=jboss:jboss  src/main/resources/themes /opt/jboss/keycloak_install_
 
 #ADD src/main/resources/override /opt/jboss/keycloak_install_stage/override
 
-#COPY --chown=jboss:jboss  target/keycloak_providers /opt/jboss/keycloak_install_stage/keycloak_providers
+COPY --chown=jboss:jboss  target/keycloak_providers /opt/jboss/providers
 
 ### ------------------------- Build Keycloak ----------------------------- ###
 
