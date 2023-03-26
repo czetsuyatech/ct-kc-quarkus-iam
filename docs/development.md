@@ -32,7 +32,7 @@ If you have access to the private repositories, you can check them out by runnin
 ```shell
 git submodule add -b main git@github.com:czetsuyatech/ct-keycloak-quarkus-spis.git
 git submodule add -b main git@github.com:czetsuyatech/ct-keycloak-quarkus-security.git
-git submodule add -b main git@github.com:czetsuyatech/ct-keycloak-spring-security.git
+git submodule add -b main git@github.com:czetsuyatech/ct-keycloak-quarkus-spring-security.git
 ```
 
 **If you already downloaded the sub-modules and wanted to get an update**

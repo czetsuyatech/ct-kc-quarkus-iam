@@ -19,12 +19,13 @@
     <mysql-connector.version>8.0.29</mysql-connector.version>
     <lombok.version>1.18.24</lombok.version>
     <jackson.version>2.13.3</jackson.version>
-    <spring-boot.version>2.7.1</spring-boot.version>
+    <spring-boot.version>3.0.5</spring-boot.version>
   </properties>
 
   <modules>
     <module>docker-assembly</module>
     <module>ct-keycloak-quarkus-spis</module>
+    <module>ct-keycloak-quarkus-spring-security</module>
   </modules>
 
   <dependencyManagement>
@@ -36,6 +37,14 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring-boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
       <dependency>
         <groupId>org.keycloak</groupId>
         <artifactId>keycloak-core</artifactId>
