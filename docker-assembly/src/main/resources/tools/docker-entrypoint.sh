@@ -31,6 +31,5 @@ file_env() {
 
 KEYCLOAK_ARGS=""
 
-
 exec /opt/jboss/keycloak/bin/kc.sh start-dev
 exit $?

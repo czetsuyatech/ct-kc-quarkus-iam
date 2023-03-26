@@ -16,6 +16,11 @@
   <dependencies>
     <dependency>
       <groupId>com.czetsuyatech</groupId>
+      <artifactId>ct-keycloak-quarkus-jwt</artifactId>
+      <version>LATEST-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.czetsuyatech</groupId>
       <artifactId>ct-keycloak-quarkus-spis</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -35,6 +40,12 @@
             </goals>
             <configuration>
               <artifactItems>
+                <artifactItem>
+                  <groupId>com.czetsuyatech</groupId>
+                  <artifactId>ct-keycloak-quarkus-jwt</artifactId>
+                  <overWrite>true</overWrite>
+                  <outputDirectory>${project.build.directory}/keycloak_providers</outputDirectory>
+                </artifactItem>
                 <artifactItem>
                   <groupId>com.czetsuyatech</groupId>
                   <artifactId>ct-keycloak-quarkus-spis</artifactId>

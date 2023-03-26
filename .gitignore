@@ -33,6 +33,8 @@ build/
 
 # Files
 docker-assembly/downloads
+ct-keycloak-quarkus-spis
+ct-keycloak-quarkus-spring-security
 
 # Artifacts
 keycloak-*.tar.gz

@@ -2,7 +2,7 @@
 #####                 Build ct-keycloak-quarkus-iam                 #####
 #################################################################
 
-FROM openjdk:19-ea-17-slim-buster
+FROM eclipse-temurin:17.0.6_10-jre as builder
 
 ### ------------------------- Environment Variables ------------------------- ###
 
@@ -35,8 +35,8 @@ RUN apt-get update \
         git \
 # procps : for 'free' command
         procps \
-# iputils-ping : for 'ping' command
-        iputils-ping \
+# iptools-ping : for 'ping' command
+#        iptools-ping \
 # iproute2 : for 'ip' command
         iproute2 \
 # java.lang.UnsatisfiedLinkError: /usr/local/openjdk-11/lib/libfontmanager.so: libfreetype.so.6: cannot open shared object file: No such file or directory
@@ -45,34 +45,30 @@ RUN apt-get update \
         fontconfig libfreetype6 \
     && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
 
+### ------------------------- Configurations ----------------------------- ###
+
+RUN mkdir /opt/jboss
+
+ADD src/main/resources/tools /opt/jboss/tools
+RUN chmod +x /opt/jboss/tools/*
+
+ADD downloads /opt/jboss/keycloak_install_stage/downloads
+
+ADD target/keycloak_providers /opt/jboss/keycloak_install_stage/keycloak_providers
+
+### ------------------------- Build Keycloak ----------------------------- ###
+
+RUN /opt/jboss/tools/build-keycloak.sh
+
+### ------------------------- Start Keycloak ------------------------- ###
+
+FROM eclipse-temurin:17.0.6_10-jre
+COPY --from=builder /opt/jboss/ /opt/jboss/
+
 RUN groupadd -r jboss -g 1000 \
     && useradd -u 1000 -r -g jboss -m -d /opt/jboss -s /sbin/nologin -c "JBoss User" jboss \
     && chown -R jboss:jboss /opt/jboss \
     && chmod -R g+rw /opt/jboss
-
-### ------------------------- Configurations ----------------------------- ###
-
-COPY --chown=jboss:jboss src/main/resources/build /opt/jboss/build
-
-RUN chmod +x /opt/jboss/build/*
-
-COPY --chown=jboss:jboss  downloads /opt/jboss/keycloak_install_stage/downloads
-
-#COPY --chown=jboss:jboss  src/main/resources/modules /opt/jboss/modules
-
-#COPY --chown=jboss:jboss  src/main/resources/realms /opt/jboss/keycloak_install_stage/realms
-
-COPY --chown=jboss:jboss  src/main/resources/themes /opt/jboss/keycloak_install_stage/themes
-
-#ADD src/main/resources/override /opt/jboss/keycloak_install_stage/override
-
-COPY --chown=jboss:jboss  target/keycloak_providers /opt/jboss/providers
-
-### ------------------------- Build Keycloak ----------------------------- ###
-
-RUN /opt/jboss/build/build-keycloak.sh
-
-### ------------------------- Start Keycloak ------------------------- ###
 
 USER jboss
 
@@ -80,8 +76,10 @@ USER jboss
 ENV LAUNCH_JBOSS_IN_BACKGROUND true
 
 # Expose Keycloak ports
-EXPOSE 8080 8443 9990
+EXPOSE 8080
+EXPOSE 8443
+EXPOSE 9990
 
-ENTRYPOINT [ "/opt/jboss/build/docker-entrypoint.sh" ]
+ENTRYPOINT [ "/opt/jboss/tools/docker-entrypoint.sh" ]
 
 CMD ["-b", "0.0.0.0"]
