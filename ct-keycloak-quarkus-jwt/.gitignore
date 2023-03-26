@@ -30,10 +30,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-# Files
-docker-assembly/downloads
-
-# Artifacts
-keycloak-*.tar.gz
-mysql-connector-java-*.jar

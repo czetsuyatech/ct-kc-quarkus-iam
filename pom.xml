@@ -26,6 +26,7 @@
     <module>docker-assembly</module>
     <module>ct-keycloak-quarkus-spis</module>
     <module>ct-keycloak-quarkus-spring-security</module>
+    <module>ct-keycloak-quarkus-jwt</module>
   </modules>
 
   <dependencyManagement>
