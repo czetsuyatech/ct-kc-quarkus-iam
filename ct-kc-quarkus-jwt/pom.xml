@@ -8,7 +8,7 @@
     <version>LATEST-SNAPSHOT</version>
   </parent>
 
-  <artifactId>ct-keycloak-quarkus-jwt</artifactId>
+  <artifactId>ct-kc-quarkus-jwt</artifactId>
   <name>CT Keycloak Quarkus JWT</name>
 
   <dependencies>

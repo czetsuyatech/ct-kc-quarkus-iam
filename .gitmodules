@@ -1,8 +1,8 @@
-[submodule "ct-keycloak-quarkus-spis"]
-	path = ct-keycloak-quarkus-spis
-	url = git@github.com:czetsuyatech/ct-keycloak-quarkus-spis.git
-	branch = develop
-[submodule "ct-keycloak-quarkus-spring-security"]
-	path = ct-keycloak-quarkus-spring-security
-	url = git@github.com:czetsuyatech/ct-keycloak-quarkus-spring-security.git
-	branch = develop
+[submodule "ct-kc-quarkus-spis"]
+	path = ct-kc-quarkus-spis
+	url = git@github.com:czetsuyatech/ct-kc-quarkus-spis.git
+	branch = main
+[submodule "ct-kc-quarkus-spring-security"]
+	path = ct-kc-quarkus-spring-security
+	url = git@github.com:czetsuyatech/ct-kc-quarkus-spring-security.git
+	branch = main

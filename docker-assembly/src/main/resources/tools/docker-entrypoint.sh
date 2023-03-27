@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/bash -e
+
 set -eou pipefail
 
 # Saves the value of an environment variable into a file. Use by Docker's secrets.
@@ -31,5 +32,5 @@ file_env() {
 
 KEYCLOAK_ARGS=""
 
-exec /opt/jboss/keycloak/bin/kc.sh start-dev
+exec /opt/keycloak/bin/kc.sh start-dev
 exit $?

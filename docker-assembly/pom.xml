@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.czetsuyatech</groupId>
-    <artifactId>ct-keycloak-quarkus-iam</artifactId>
+    <artifactId>ct-kc-quarkus-iam</artifactId>
     <version>LATEST-SNAPSHOT</version>
   </parent>
 
@@ -16,12 +16,12 @@
   <dependencies>
     <dependency>
       <groupId>com.czetsuyatech</groupId>
-      <artifactId>ct-keycloak-quarkus-jwt</artifactId>
+      <artifactId>ct-kc-quarkus-jwt</artifactId>
       <version>LATEST-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>com.czetsuyatech</groupId>
-      <artifactId>ct-keycloak-quarkus-spis</artifactId>
+      <artifactId>ct-kc-quarkus-spis</artifactId>
       <version>${project.version}</version>
     </dependency>
   </dependencies>
@@ -42,13 +42,13 @@
               <artifactItems>
                 <artifactItem>
                   <groupId>com.czetsuyatech</groupId>
-                  <artifactId>ct-keycloak-quarkus-jwt</artifactId>
+                  <artifactId>ct-kc-quarkus-jwt</artifactId>
                   <overWrite>true</overWrite>
                   <outputDirectory>${project.build.directory}/keycloak_providers</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>com.czetsuyatech</groupId>
-                  <artifactId>ct-keycloak-quarkus-spis</artifactId>
+                  <artifactId>ct-kc-quarkus-spis</artifactId>
                   <overWrite>true</overWrite>
                   <outputDirectory>${project.build.directory}/keycloak_providers</outputDirectory>
                 </artifactItem>
