@@ -27,6 +27,7 @@
     <module>ct-kc-quarkus-spis</module>
     <module>ct-kc-quarkus-spring-security</module>
     <module>ct-kc-quarkus-jwt</module>
+    <module>ct-kc-quarkus-theme</module>
   </modules>
 
   <dependencyManagement>

@@ -17,11 +17,16 @@
     <dependency>
       <groupId>com.czetsuyatech</groupId>
       <artifactId>ct-kc-quarkus-jwt</artifactId>
-      <version>LATEST-SNAPSHOT</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>com.czetsuyatech</groupId>
       <artifactId>ct-kc-quarkus-spis</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.czetsuyatech</groupId>
+      <artifactId>ct-kc-quarkus-theme</artifactId>
       <version>${project.version}</version>
     </dependency>
   </dependencies>
@@ -49,6 +54,12 @@
                 <artifactItem>
                   <groupId>com.czetsuyatech</groupId>
                   <artifactId>ct-kc-quarkus-spis</artifactId>
+                  <overWrite>true</overWrite>
+                  <outputDirectory>${project.build.directory}/keycloak_providers</outputDirectory>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>com.czetsuyatech</groupId>
+                  <artifactId>ct-kc-quarkus-theme</artifactId>
                   <overWrite>true</overWrite>
                   <outputDirectory>${project.build.directory}/keycloak_providers</outputDirectory>
                 </artifactItem>
