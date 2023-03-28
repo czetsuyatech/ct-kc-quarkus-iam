@@ -30,9 +30,11 @@ file_env() {
   unset "$fileVar"
 }
 
-KEYCLOAK_ARGS=""
+### Import Realm
 
-ls -la /opt/keycloak/data/import
+#exec /opt/keycloak/bin/kc.sh import --file "/opt/keycloak/data/import/ct-realm-prod.json"
+
+KEYCLOAK_ARGS=""
 
 exec /opt/keycloak/bin/kc.sh start-dev
 exit $?

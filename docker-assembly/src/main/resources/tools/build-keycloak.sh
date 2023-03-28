@@ -11,7 +11,6 @@ if [ -e $keycloakDistFile ];
 then
     echo "Keycloak from downloads folder: $keycloakDistFile"
     tar zxf $keycloakDistFile
-    rm ${keycloakDistFile}
 else
     echo "Keycloak from remote source: $keycloakDistUrl"
     curl -L $keycloakDistUrl | tar zx

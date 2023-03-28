@@ -35,7 +35,6 @@ services:
       KC_DB_URL_PROPERTIES: ?useSSL=false&allowPublicKeyRetrieval=true
 
       # Uncomment when in production
-      # KEYCLOAK_IMPORT: /opt/jboss/keycloak_install_stage/realms/ct-realm-prod.json
       KEYCLOAK_ADMIN: keycloak.admin
       KEYCLOAK_ADMIN_PASSWORD: keycloak.admin
 

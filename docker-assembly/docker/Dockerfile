@@ -11,7 +11,6 @@ ENV LAUNCH_JBOSS_IN_BACKGROUND 1
 ENV PROXY_ADDRESS_FORWARDING false
 ENV KEYCLOAK_HOME /opt/jboss/keycloak
 ENV LANG en_US.UTF-8
-#ENV KEYCLOAK_IMPORT /opt/jboss/keycloak_install_stage/realms/ct-realm-dev-${KEYC.json
 
 ### ------------------------- Bash Arguments ------------------------- ###
 
