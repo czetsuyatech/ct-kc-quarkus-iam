@@ -1481,8 +1481,8 @@
     "org.keycloak.storage.UserStorageProvider": [
       {
         "id": "cd5b20e0-1563-481b-b0f5-a73576e34960",
-        "name": "ct-keycloak-iam",
-        "providerId": "ct-keycloak-iam",
+        "name": "ct-kc-quarkus-iam",
+        "providerId": "ct-kc-quarkus-iam",
         "subComponents": {},
         "config": {
           "cachePolicy": [

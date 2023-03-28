@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.czetsuyatech</groupId>
-    <artifactId>ct-keycloak-quarkus-iam</artifactId>
+    <artifactId>ct-kc-quarkus-iam</artifactId>
     <version>LATEST-SNAPSHOT</version>
   </parent>
 

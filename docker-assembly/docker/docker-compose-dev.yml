@@ -12,7 +12,7 @@ services:
       MYSQL_PASSWORD: db_pass_123
     command: mysqld --sql_mode=""
 
-  ct-keycloak-quarkus-iam:
+  ct-kc-quarkus-iam:
     depends_on:
       - keycloak-db
     build:
