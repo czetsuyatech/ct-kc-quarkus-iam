@@ -32,5 +32,7 @@ file_env() {
 
 KEYCLOAK_ARGS=""
 
+ls -la /opt/keycloak/data/import
+
 exec /opt/keycloak/bin/kc.sh start-dev
 exit $?

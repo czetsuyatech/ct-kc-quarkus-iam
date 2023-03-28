@@ -25,10 +25,11 @@ cp /opt/jboss/keycloak_install_stage/keycloak_providers/*.jar /opt/jboss/keycloa
 
 ls -laR /opt/jboss/keycloak/providers
 
-### Install Theme
+### Install Realm
 
-#mkdir -p /opt/jboss/keycloak/themes
-#cp -R /opt/jboss/keycloak_install_stage/themes/* /opt/jboss/keycloak/themes
+mkdir -p ${KEYCLOAK_HOME}/data/import
+cp -a /opt/jboss/keycloak_install_stage/realms/ ${KEYCLOAK_HOME}/data/import/
+ls -laR /opt/jboss/keycloak/data/import
 
 ### Cleanup
 
