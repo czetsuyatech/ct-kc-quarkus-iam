@@ -1,0 +1,26 @@
+{
+  "realm" : "czetsuyatech",
+  "users" : [ {
+    "id" : "80b9ea2e-4499-4865-88fc-ac889bbc62f3",
+    "createdTimestamp" : 1679818835039,
+    "username" : "keycloak.user",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "",
+    "lastName" : "",
+    "credentials" : [ {
+      "id" : "1695d0de-4462-42cb-83ae-c0d3535c1ce0",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1679819107997,
+      "secretData" : "{\"value\":\"XIK1ayMHPjFzhp5wD3XHkAGvWZWNDVynUWjDX1Wb8xQ=\",\"salt\":\"VMuGrPma9PIcBHFclwEhYg==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-czetsuyatech" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ]
+}

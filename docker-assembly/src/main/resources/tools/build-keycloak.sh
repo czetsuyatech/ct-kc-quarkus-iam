@@ -27,15 +27,13 @@ ls -laR /opt/jboss/keycloak/providers
 ### Install Realm
 
 mkdir -p ${KEYCLOAK_HOME}/data/import
-cp -a /opt/jboss/keycloak_install_stage/realms/ ${KEYCLOAK_HOME}/data/import/
-ls -laR /opt/jboss/keycloak/data/import
+cp -a /opt/jboss/keycloak_install_stage/realms/* ${KEYCLOAK_HOME}/data/import
 
 ### Cleanup
 
 rm -rf /opt/jboss/keycloak_install_stage
+rm -rf /opt/jboss/keycloak/data/h2
 
 ### Build Keycloak
-
-dos2unix /opt/jboss/tools/*
 
 /opt/jboss/keycloak/bin/kc.sh build

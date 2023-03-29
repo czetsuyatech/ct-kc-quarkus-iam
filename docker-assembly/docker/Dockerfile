@@ -48,6 +48,7 @@ RUN mkdir /opt/jboss
 
 ADD src/main/resources/tools /opt/jboss/tools
 RUN chmod +x /opt/jboss/tools/*
+RUN dos2unix /opt/jboss/tools/*
 
 ADD downloads /opt/jboss/keycloak_install_stage/downloads
 
@@ -62,13 +63,15 @@ RUN /opt/jboss/tools/build-keycloak.sh
 ### ------------------------- Start Keycloak ------------------------- ###
 
 FROM eclipse-temurin:17.0.6_10-jre
-COPY --from=builder /opt/jboss/keycloak /opt/keycloak/
-COPY --from=builder /opt/jboss/tools /opt/keycloak/tools
 
 RUN groupadd -r keycloak -g 1000 \
-    && useradd -u 1000 -r -g keycloak -m -d /opt/keycloak -s /sbin/nologin -c "Keycloak User" keycloak \
-    && chown -R keycloak:keycloak /opt/keycloak \
-    && chmod -R g+rwx /opt/keycloak
+    && useradd -u 1000 -r -g keycloak -m -d /opt/keycloak -s /sbin/nologin -c "Keycloak User" keycloak
+
+COPY --from=builder /opt/jboss/keycloak /opt/keycloak
+COPY --from=builder /opt/jboss/tools /opt/keycloak/tools
+
+RUN chown -R keycloak:keycloak /opt/keycloak \
+  && chmod -R g+rwx /opt/keycloak
 
 USER keycloak
 
