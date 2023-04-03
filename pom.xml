@@ -25,10 +25,10 @@
 
   <modules>
     <module>docker-assembly</module>
-    <module>ct-kc-quarkus-spis</module>
-    <module>ct-kc-quarkus-spring-security</module>
-    <module>ct-kc-quarkus-jwt</module>
-    <module>ct-kc-quarkus-theme</module>
+    <module>ct-kcq-spis</module>
+    <module>ct-kcq-spring-security</module>
+    <module>ct-kcq-jwt</module>
+    <module>ct-kcq-theme</module>
   </modules>
 
   <dependencyManagement>
