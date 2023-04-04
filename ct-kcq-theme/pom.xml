@@ -10,7 +10,7 @@
   <artifactId>ct-kc-quarkus-theme</artifactId>
   <packaging>jar</packaging>
 
-  <name>CT KC Quarkus Theme</name>
+  <name>CT Keycloak Quarkus Theme</name>
 
   <dependencies>
     <dependency>
