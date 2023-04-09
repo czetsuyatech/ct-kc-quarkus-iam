@@ -1,8 +1,8 @@
 [submodule "ct-kcq-spis"]
 	path = ct-kcq-spis
 	url = git@github.com:czetsuyatech/ct-kcq-spis.git
-	branch = develop
+	branch = main
 [submodule "ct-kcq-spring-security"]
 	path = ct-kcq-spring-security
 	url = git@github.com:czetsuyatech/ct-kcq-spring-security.git
-	branch = develop
+	branch = main
