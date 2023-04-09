@@ -1,10 +1,8 @@
-#################################################################
-#####                 Build ct-kc-quarkus-iam                 #####
-#################################################################
+# Build ct-kc-quarkus-iam
 
 FROM eclipse-temurin:17.0.6_10-jre as builder
 
-### ------------------------- Environment Variables ------------------------- ###
+# Environment Variables
 
 ENV KEYCLOAK_VERSION 21.0.2
 ENV LAUNCH_JBOSS_IN_BACKGROUND 1
@@ -12,12 +10,12 @@ ENV PROXY_ADDRESS_FORWARDING false
 ENV KEYCLOAK_HOME /opt/jboss/keycloak
 ENV LANG en_US.UTF-8
 
-### ------------------------- Bash Arguments ------------------------- ###
+# Bash Arguments
 
 ARG KEYCLOAK_DIST_BASE=https://github.com/keycloak/keycloak/releases/download/$KEYCLOAK_VERSION/
 ARG KEYCLOAK_DIST_FILE=keycloak-$KEYCLOAK_VERSION.tar.gz
 
-### ------------------------- Base ------------------------- ###
+# Base
 
 USER root
 
@@ -42,7 +40,7 @@ RUN apt-get update \
         fontconfig libfreetype6 \
     && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
 
-### ------------------------- Configurations ----------------------------- ###
+# Configurations
 
 RUN mkdir /opt/jboss
 
@@ -56,11 +54,11 @@ ADD target/keycloak_providers /opt/jboss/keycloak_install_stage/keycloak_provide
 
 ADD src/main/resources/realms /opt/jboss/keycloak_install_stage/realms
 
-### ------------------------- Build Keycloak ----------------------------- ###
+# Build Keycloak
 
 RUN /opt/jboss/tools/build-keycloak.sh
 
-### ------------------------- Start Keycloak ------------------------- ###
+# Start Keycloak
 
 FROM eclipse-temurin:17.0.6_10-jre
 
