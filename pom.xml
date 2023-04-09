@@ -15,7 +15,7 @@
     <java.version>17</java.version>
     <javadoc.version>17</javadoc.version>
 
-    <iam-client.version>1.0.0+e92f793</iam-client.version>
+    <iam-client.version>1.0.0+4d9eb54</iam-client.version>
 
     <jboss-logging.version>3.5.0.Final</jboss-logging.version>
     <keycloak.version>21.0.1</keycloak.version>
