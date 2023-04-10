@@ -18,7 +18,7 @@
     <iam-client.version>1.0.0+4d9eb54</iam-client.version>
 
     <jboss-logging.version>3.5.0.Final</jboss-logging.version>
-    <keycloak.version>21.0.1</keycloak.version>
+    <keycloak.version>21.0.2</keycloak.version>
     <mysql-connector.version>8.0.29</mysql-connector.version>
     <lombok.version>1.18.24</lombok.version>
     <jackson.version>2.13.3</jackson.version>
@@ -36,12 +36,11 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.keycloak.bom</groupId>
-        <artifactId>keycloak-adapter-bom</artifactId>
-        <version>${keycloak.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
+        <groupId>com.czetsuyatech</groupId>
+        <artifactId>ct-kcq-iam-client</artifactId>
+        <version>${iam-client.version}</version>
       </dependency>
+
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>

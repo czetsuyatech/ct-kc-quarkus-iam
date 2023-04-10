@@ -26,6 +26,10 @@
     </dependency>
     <dependency>
       <groupId>com.czetsuyatech</groupId>
+      <artifactId>ct-kcq-iam-client</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.czetsuyatech</groupId>
       <artifactId>ct-kc-quarkus-theme</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -54,6 +58,13 @@
                 <artifactItem>
                   <groupId>com.czetsuyatech</groupId>
                   <artifactId>ct-kc-quarkus-spis</artifactId>
+                  <overWrite>true</overWrite>
+                  <outputDirectory>${project.build.directory}/keycloak_providers</outputDirectory>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>com.czetsuyatech</groupId>
+                  <artifactId>ct-kcq-iam-client</artifactId>
+                  <classifier>jar-with-dependencies</classifier>
                   <overWrite>true</overWrite>
                   <outputDirectory>${project.build.directory}/keycloak_providers</outputDirectory>
                 </artifactItem>

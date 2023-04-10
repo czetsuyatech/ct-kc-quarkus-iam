@@ -45,4 +45,4 @@ services:
       DEBUG_PORT: 8888
       PROXY_ADDRESS_FORWARDING: 'true'
 
-      KC_LOG_LEVEL: DEBUG
+      KC_LOG_LEVEL: INFO
