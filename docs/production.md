@@ -48,8 +48,9 @@ You will need to set the following environment variables correctly.
 
 ## Compatibility Version Tested
 
-| Keycloak | MySQL  |
-|----------|--------|
-| 21.0.2   | 8.0.29 |
+| Application | Version |
+|-------------|---------|
+| Keycloak    | 21.0.2  |
+| MySQL       | 8.0.29  |
 
 _*These values can be changed in the Dockerfile file._
