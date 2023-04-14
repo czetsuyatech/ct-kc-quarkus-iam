@@ -1,8 +1,8 @@
-[submodule "ct-kcq-spis"]
-	path = ct-kcq-spis
-	url = git@github.com:czetsuyatech/ct-kcq-spis.git
-	branch = main
-[submodule "ct-kcq-spring-security"]
-	path = ct-kcq-spring-security
-	url = git@github.com:czetsuyatech/ct-kcq-spring-security.git
-	branch = main
+[submodule "hivemaster-spis"]
+	path = hivemaster-spis
+	url = git@github.com:czetsuyatech/hivemaster-spis.git
+	branch = develop
+[submodule "hivemaster-spring-security"]
+	path = hivemaster-spring-security
+	url = git@github.com:czetsuyatech/hivemaster-spring-security.git
+	branch = develop
