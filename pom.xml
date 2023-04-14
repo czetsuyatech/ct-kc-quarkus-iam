@@ -3,11 +3,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.czetsuyatech</groupId>
-  <artifactId>ct-kc-quarkus-iam</artifactId>
+  <groupId>com.czetsuyatech.hivemaster</groupId>
+  <artifactId>hivemaster-iam</artifactId>
   <version>LATEST-SNAPSHOT</version>
-  <name>CT Keycloak Quarkus IAM</name>
-  <description>CT Keycloak Quarkus IAM</description>
+  <name>HiveMaster | IAM</name>
   <packaging>pom</packaging>
 
   <properties>
@@ -15,7 +14,7 @@
     <java.version>17</java.version>
     <javadoc.version>17</javadoc.version>
 
-    <iam-client.version>1.0.0+4d9eb54</iam-client.version>
+    <iam-client.version>1.0.0+7b28d9e</iam-client.version>
 
     <jboss-logging.version>3.5.0.Final</jboss-logging.version>
     <keycloak.version>21.0.2</keycloak.version>
@@ -27,17 +26,17 @@
 
   <modules>
     <module>docker-assembly</module>
-    <module>ct-kcq-spis</module>
-    <module>ct-kcq-spring-security</module>
-    <module>ct-kcq-jwt</module>
-    <module>ct-kcq-theme</module>
+    <module>hivemaster-spis</module>
+    <module>hivemaster-spring-security</module>
+    <module>hivemaster-jwt</module>
+    <module>hivemaster-theme</module>
   </modules>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>com.czetsuyatech</groupId>
-        <artifactId>ct-kcq-iam-client</artifactId>
+        <groupId>com.czetsuyatech.hivemaster</groupId>
+        <artifactId>hivemaster-iam-client</artifactId>
         <version>${iam-client.version}</version>
       </dependency>
 

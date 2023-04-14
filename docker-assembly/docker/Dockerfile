@@ -1,4 +1,4 @@
-# Build ct-kc-quarkus-iam
+# Build hivemaster-iam
 
 FROM eclipse-temurin:17.0.6_10-jre as builder
 

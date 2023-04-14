@@ -3,34 +3,34 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.czetsuyatech</groupId>
-    <artifactId>ct-kc-quarkus-iam</artifactId>
+    <groupId>com.czetsuyatech.hivemaster</groupId>
+    <artifactId>hivemaster-iam</artifactId>
     <version>LATEST-SNAPSHOT</version>
   </parent>
 
   <artifactId>docker-assembly</artifactId>
-  <name>CT Keycloak Quarkus Docker</name>
-  <description>CT Keycloak Quarkus Docker</description>
+  <name>HiveMaster | Docker</name>
+  <description>HiveMaster |Docker</description>
   <packaging>pom</packaging>
 
   <dependencies>
     <dependency>
-      <groupId>com.czetsuyatech</groupId>
-      <artifactId>ct-kc-quarkus-jwt</artifactId>
+      <groupId>com.czetsuyatech.hivemaster</groupId>
+      <artifactId>hivemaster-jwt</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>com.czetsuyatech</groupId>
-      <artifactId>ct-kc-quarkus-spis</artifactId>
+      <groupId>com.czetsuyatech.hivemaster</groupId>
+      <artifactId>hivemaster-spis</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>com.czetsuyatech</groupId>
-      <artifactId>ct-kcq-iam-client</artifactId>
+      <groupId>com.czetsuyatech.hivemaster</groupId>
+      <artifactId>hivemaster-iam-client</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.czetsuyatech</groupId>
-      <artifactId>ct-kc-quarkus-theme</artifactId>
+      <groupId>com.czetsuyatech.hivemaster</groupId>
+      <artifactId>hivemaster-theme</artifactId>
       <version>${project.version}</version>
     </dependency>
   </dependencies>
@@ -50,27 +50,27 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>com.czetsuyatech</groupId>
-                  <artifactId>ct-kc-quarkus-jwt</artifactId>
+                  <groupId>com.czetsuyatech.hivemaster</groupId>
+                  <artifactId>hivemaster-jwt</artifactId>
                   <overWrite>true</overWrite>
                   <outputDirectory>${project.build.directory}/keycloak_providers</outputDirectory>
                 </artifactItem>
                 <artifactItem>
-                  <groupId>com.czetsuyatech</groupId>
-                  <artifactId>ct-kc-quarkus-spis</artifactId>
+                  <groupId>com.czetsuyatech.hivemaster</groupId>
+                  <artifactId>hivemaster-spis</artifactId>
                   <overWrite>true</overWrite>
                   <outputDirectory>${project.build.directory}/keycloak_providers</outputDirectory>
                 </artifactItem>
                 <artifactItem>
-                  <groupId>com.czetsuyatech</groupId>
-                  <artifactId>ct-kcq-iam-client</artifactId>
+                  <groupId>com.czetsuyatech.hivemaster</groupId>
+                  <artifactId>hivemaster-iam-client</artifactId>
                   <classifier>jar-with-dependencies</classifier>
                   <overWrite>true</overWrite>
                   <outputDirectory>${project.build.directory}/keycloak_providers</outputDirectory>
                 </artifactItem>
                 <artifactItem>
-                  <groupId>com.czetsuyatech</groupId>
-                  <artifactId>ct-kc-quarkus-theme</artifactId>
+                  <groupId>com.czetsuyatech.hivemaster</groupId>
+                  <artifactId>hivemaster-theme</artifactId>
                   <overWrite>true</overWrite>
                   <outputDirectory>${project.build.directory}/keycloak_providers</outputDirectory>
                 </artifactItem>

@@ -1,4 +1,4 @@
-package com.czetsuyatech.keycloak.jwt.dto.user;
+package com.hivemaster.jwt.dto.user;
 
 public enum UserType {
 

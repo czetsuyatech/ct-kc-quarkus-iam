@@ -2,15 +2,15 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.czetsuyatech</groupId>
-    <artifactId>ct-kc-quarkus-iam</artifactId>
+    <groupId>com.czetsuyatech.hivemaster</groupId>
+    <artifactId>hivemaster-iam</artifactId>
     <version>LATEST-SNAPSHOT</version>
   </parent>
 
-  <artifactId>ct-kc-quarkus-theme</artifactId>
+  <artifactId>hivemaster-theme</artifactId>
   <packaging>jar</packaging>
 
-  <name>CT Keycloak Quarkus Theme</name>
+  <name>HiveMaster | Theme</name>
 
   <dependencies>
     <dependency>

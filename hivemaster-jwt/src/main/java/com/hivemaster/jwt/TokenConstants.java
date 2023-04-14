@@ -1,4 +1,4 @@
-package com.czetsuyatech.keycloak.jwt;
+package com.hivemaster.jwt;
 
 public final class TokenConstants {
 

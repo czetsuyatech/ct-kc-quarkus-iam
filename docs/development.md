@@ -30,8 +30,8 @@ Its submodules are hosted on other repositories in private such as Keycloak SPIs
 If you have access to the private repositories, you can check them out by running the following command.
 
 ```shell
-git submodule add -b main git@github.com:czetsuyatech/ct-kcq-spis.git
-git submodule add -b main git@github.com:czetsuyatech/ct-kcq-spring-security.git
+git submodule add -b main git@github.com:czetsuyatech/hivemaster-spis.git
+git submodule add -b main git@github.com:czetsuyatech/hivemaster-spring-security.git
 ```
 
 **If you already downloaded the sub-modules and wanted to get an update**

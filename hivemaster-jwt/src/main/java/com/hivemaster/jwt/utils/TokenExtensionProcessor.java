@@ -1,4 +1,4 @@
-package com.czetsuyatech.keycloak.jwt.utils;
+package com.hivemaster.jwt.utils;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;

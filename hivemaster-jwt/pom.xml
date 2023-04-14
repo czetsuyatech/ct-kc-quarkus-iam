@@ -3,13 +3,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.czetsuyatech</groupId>
-    <artifactId>ct-kc-quarkus-iam</artifactId>
+    <groupId>com.czetsuyatech.hivemaster</groupId>
+    <artifactId>hivemaster-iam</artifactId>
     <version>LATEST-SNAPSHOT</version>
   </parent>
 
-  <artifactId>ct-kc-quarkus-jwt</artifactId>
-  <name>CT Keycloak Quarkus JWT</name>
+  <artifactId>hivemaster-jwt</artifactId>
+  <name>HiveMaster | JWT</name>
 
   <dependencies>
     <dependency>

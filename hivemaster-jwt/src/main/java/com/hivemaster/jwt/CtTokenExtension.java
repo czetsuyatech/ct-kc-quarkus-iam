@@ -1,7 +1,7 @@
-package com.czetsuyatech.keycloak.jwt;
+package com.hivemaster.jwt;
 
-import com.czetsuyatech.keycloak.jwt.dto.user.UserData;
-import com.czetsuyatech.keycloak.jwt.utils.TokenExtensionProcessor;
+import com.hivemaster.jwt.dto.user.UserData;
+import com.hivemaster.jwt.utils.TokenExtensionProcessor;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
 import lombok.Getter;
