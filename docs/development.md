@@ -7,7 +7,7 @@ This product uses the following versions:
 **Start MySQL and the custom Keycloak server.**
 
 ```
-docker-compose -f ./docker-assembly/docker/docker-compose-dev.yml up --build
+docker-compose -f ./docker-assembly/docker/docker-compose-single.yml up --build
 ```
 
 The --build parameter ensures that the docker image is rebuilt before launch.
@@ -17,7 +17,7 @@ The default keycloak account is keycloak.admin / keycloak.admin.
 Stop the Keycloak server, and add the -v parameter to delete the volumes.
 
 ```
-docker-compose -f ./docker-assembly/docker/docker-compose-dev.yml down -v
+docker-compose -f ./docker-assembly/docker/docker-compose-single.yml down -v
 ```
 
 ## SubModules

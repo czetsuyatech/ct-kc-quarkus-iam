@@ -21,7 +21,7 @@ example AWS RDS.
 Start the container.
 
 ```
-docker-compose -f ./keycloak-quarkus-docker-assembly/docker/docker-compose-single.yml up
+docker-compose -f ./docker-assembly/docker/docker-compose-single.yml up
 ```
 
 Add the --build parameter to rebuild the images.
@@ -29,7 +29,7 @@ Add the --build parameter to rebuild the images.
 Stop the containers.
 
 ```
-docker-compose -f ./keycloak-quarkus-docker-assembly/docker/docker-compose-single.yml down
+docker-compose -f ./docker-assembly/docker/docker-compose-single.yml down
 ```
 
 Add the -v parameter to remove the volumes.
