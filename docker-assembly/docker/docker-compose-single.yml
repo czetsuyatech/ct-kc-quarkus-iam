@@ -1,5 +1,8 @@
 version: '3.3'
 
+networks:
+  backend:
+
 services:
   keycloak-db:
     image: mysql:8.0
@@ -11,9 +14,11 @@ services:
       MYSQL_USER: db_user
       MYSQL_PASSWORD: db_pass_123
     command: mysqld --sql_mode=""
+    networks:
+      - backend
 
-  gatekeeper-iam:
-    image: gatekeeper-iam
+  hivemaster-iam:
+    image: hivemaster-iam
     depends_on:
       - keycloak-db
     build:
@@ -45,6 +50,10 @@ services:
       DEBUG_PORT: 8888
       PROXY_ADDRESS_FORWARDING: 'true'
 
-      KC_LOG_LEVEL: info,com.com.sens:debug,org.apache.hc.client5:debug
+      KC_LOG_LEVEL: info,com.hivemaster:debug,org.apache.hc.client5:debug
 
-      IAM_SERVICES_URL: http://192.168.1.12:8081/api
+      IAM_HOST: 192.168.1.17
+      IAM_PORT: 8081
+      IAM_BASE_PATH: /api
+    networks:
+      - backend

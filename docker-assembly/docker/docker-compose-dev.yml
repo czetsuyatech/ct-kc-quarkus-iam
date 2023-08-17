@@ -45,6 +45,8 @@ services:
       DEBUG_PORT: 8888
       PROXY_ADDRESS_FORWARDING: 'true'
 
-      KC_LOG_LEVEL: info,com.ct.keycloak:debug,org.apache.hc.client5:debug
+      KC_LOG_LEVEL: info,com.hivemaster:debug,org.apache.hc.client5:debug
 
-      IAM_SERVICES_URL: http://192.168.1.12:8081/api
+      IAM_HOST: localhost
+      IAM_PORT: 8081
+      IAM_BASE_PATH: /api

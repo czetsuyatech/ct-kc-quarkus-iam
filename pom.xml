@@ -3,9 +3,9 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.czetsuyatech.hivemaster</groupId>
+  <groupId>com.hivemaster</groupId>
   <artifactId>hivemaster-iam</artifactId>
-  <version>LATEST-SNAPSHOT</version>
+  <version>0.0.1-SNAPSHOT</version>
   <name>HiveMaster | IAM</name>
   <packaging>pom</packaging>
 
@@ -14,7 +14,7 @@
     <java.version>17</java.version>
     <javadoc.version>17</javadoc.version>
 
-    <iam-client.version>1.0.0+7b28d9e</iam-client.version>
+    <iam-services-client.version>0.0.1-SNAPSHOT</iam-services-client.version>
 
     <jboss-logging.version>3.5.0.Final</jboss-logging.version>
     <keycloak.version>21.0.2</keycloak.version>
@@ -35,9 +35,9 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>com.czetsuyatech.hivemaster</groupId>
-        <artifactId>hivemaster-iam-client</artifactId>
-        <version>${iam-client.version}</version>
+        <groupId>com.hivemaster</groupId>
+        <artifactId>hivemaster-iam-services-client</artifactId>
+        <version>${iam-services-client.version}</version>
       </dependency>
 
       <dependency>
