@@ -1,15 +1,11 @@
 package com.hivemaster.jwt.utils;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 @Builder
-@Getter
-@Setter
+@Data
 public class TokenExtensionProcessor {
 
-  @JsonProperty("name")
   private final String name;
 }
