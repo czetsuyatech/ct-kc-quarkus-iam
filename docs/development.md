@@ -1,7 +1,7 @@
 # Development
 
 This product uses the following versions:
-- Keycloak 21.0.2
+- Keycloak 22.0.1
 - MySQL JDBC driver 8.0.29
 
 **Start MySQL and the custom Keycloak server.**

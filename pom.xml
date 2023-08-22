@@ -17,11 +17,11 @@
     <iam-services-client.version>0.0.1-SNAPSHOT</iam-services-client.version>
 
     <jboss-logging.version>3.5.0.Final</jboss-logging.version>
-    <keycloak.version>21.0.2</keycloak.version>
+    <keycloak.version>22.0.1</keycloak.version>
     <mysql-connector.version>8.0.29</mysql-connector.version>
     <lombok.version>1.18.24</lombok.version>
     <jackson.version>2.13.3</jackson.version>
-    <spring-boot.version>3.0.5</spring-boot.version>
+    <spring-boot.version>3.1.2</spring-boot.version>
   </properties>
 
   <modules>
@@ -75,6 +75,12 @@
       <dependency>
         <groupId>org.keycloak</groupId>
         <artifactId>keycloak-model-legacy</artifactId>
+        <version>${keycloak.version}</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.keycloak</groupId>
+        <artifactId>keycloak-model-legacy-private</artifactId>
         <version>${keycloak.version}</version>
         <scope>provided</scope>
       </dependency>
