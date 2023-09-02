@@ -1,12 +1,16 @@
 package com.hivemaster.jwt.dto.user;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Data
 @Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Email {
 
-  private final String address;
-  private final boolean isDefaultEmail;
+  private String address;
+  private boolean isDefaultEmail;
 }

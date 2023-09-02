@@ -1,7 +1,7 @@
 version: '3.3'
 
 networks:
-  backend:
+  hm-backend:
 
 services:
   keycloak-db:
@@ -15,7 +15,7 @@ services:
       MYSQL_PASSWORD: db_pass_123
     command: mysqld --sql_mode=""
     networks:
-      - backend
+      - hm-backend
 
   hivemaster-iam:
     image: hivemaster-iam
@@ -56,4 +56,4 @@ services:
       IAM_PORT: 8081
       IAM_BASE_PATH: /api
     networks:
-      - backend
+      - hm-backend

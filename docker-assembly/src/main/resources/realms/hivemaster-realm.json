@@ -1,6 +1,6 @@
 {
   "id": "61d7cd7a-a189-40b1-846f-b780ee5633ec",
-  "realm": "czetsuyatech",
+  "realm": "hivemaster",
   "notBefore": 0,
   "defaultSignatureAlgorithm": "RS256",
   "revokeRefreshToken": false,

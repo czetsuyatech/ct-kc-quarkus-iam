@@ -1,5 +1,6 @@
 package com.hivemaster.jwt.dto.user;
 
+import java.util.Collection;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,9 +10,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserData {
+public class Organization {
 
-  private UserType type;
-
-  private UserDetails details;
+  private String code;
+  private Collection<String> apps;
 }
