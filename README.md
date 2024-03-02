@@ -23,6 +23,8 @@ In essence, the Hivemaster module serves as a versatile and indispensable compon
 unique challenges posed by these diverse authentication and authorization scenarios, all while
 upholding robust security and user experience standards.
 
+![Conceptual Diagram](./docs/img/hm-suntrust.png)
+
 `Conceptual Diagram`
 
 ![Conceptual Diagram](./docs/img/conceptual-diagram.png)
@@ -45,7 +47,7 @@ A custom theme "czetsuyatech" is configured when you run the container.
 The theme is available at keycloak-docker-assembly/src/main/resources/themes/czetsuyatech and can
 easily be overriden.
 
-### Multi-Tenancy, N-reseller Level, and Multi-Application
+### Use Cases
 
 This module supports:
 
