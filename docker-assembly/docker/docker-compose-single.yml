@@ -52,7 +52,7 @@ services:
 
       KC_LOG_LEVEL: info,com.hivemaster:debug,org.apache.hc.client5:debug
 
-      IAM_HOST: 192.168.1.17
+      IAM_HOST: http://192.168.1.8
       IAM_PORT: 8081
       IAM_BASE_PATH: /api
     networks:
