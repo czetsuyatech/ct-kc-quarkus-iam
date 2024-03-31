@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.hivemaster</groupId>
@@ -17,7 +18,7 @@
     <iam-services-client.version>0.0.1-SNAPSHOT</iam-services-client.version>
 
     <jboss-logging.version>3.5.0.Final</jboss-logging.version>
-    <keycloak.version>22.0.1</keycloak.version>
+    <keycloak.version>24.0.2</keycloak.version>
     <mysql-connector.version>8.0.29</mysql-connector.version>
     <lombok.version>1.18.24</lombok.version>
     <jackson.version>2.13.3</jackson.version>
@@ -74,13 +75,19 @@
       </dependency>
       <dependency>
         <groupId>org.keycloak</groupId>
-        <artifactId>keycloak-model-legacy</artifactId>
+        <artifactId>keycloak-model-storage</artifactId>
         <version>${keycloak.version}</version>
         <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>org.keycloak</groupId>
-        <artifactId>keycloak-model-legacy-private</artifactId>
+        <artifactId>keycloak-model-storage-services</artifactId>
+        <version>${keycloak.version}</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.keycloak</groupId>
+        <artifactId>keycloak-model-storage-private</artifactId>
         <version>${keycloak.version}</version>
         <scope>provided</scope>
       </dependency>
