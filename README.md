@@ -1,4 +1,4 @@
-# Hivemaster IAM
+# Hivemaster | IAM Core
 
 This component plays a vital role within the Hivemaster module, which is a tailored Keycloak
 application meticulously designed to address intricate authentication and authorization
